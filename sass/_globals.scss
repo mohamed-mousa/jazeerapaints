@@ -1,0 +1,77 @@
+
+
+/*========== start globals ==========*/
+:root {
+    --m-color: #00a657;
+    --s-color: #d10edd;
+    --g-color: #f2f2f2;
+}
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+    font-weight: 400;
+}
+
+/* title-font */
+.title-font {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+}
+
+@each $colorname, $color in
+(m-color-text, var(--m-color)),
+(s-color-text, var(--s-color)),
+(g-color-text, var(--g-color))
+{
+    /* color-text */
+    .#{$colorname} {
+        color:#{$color};
+    }
+}
+
+@each $colorname, $color in
+(m-color-text-hover, var(--m-color)),
+(s-color-text-hover, var(--s-color)),
+(g-color-text-hover, var(--g-color))
+{
+    /* color-text-hover */
+    .#{$colorname}:hover {
+        color:#{$color} !important;
+    }
+}
+
+
+@each $colorname, $color in
+(m-color-bg, var(--m-color)),
+(s-color-bg, var(--s-color)),
+(g-color-bg, var(--g-color))
+{
+    /* background-color */
+    .#{$colorname} {
+        background-color:#{$color};
+    }
+}
+
+@each $colorname, $color in
+(m-color-bg-hover, var(--m-color)),
+(s-color-bg-hover, var(--s-color)),
+(g-color-bg-hover, var(--g-color))
+{
+    /* backgrouns-color-hover */
+    .#{$colorname}:hover {
+        background-color:#{$color} !important;
+    }
+}
+
+/* pointer */
+.pointer {
+    cursor: pointer;
+}
+
+.m-color-bg-hover {
+    &:hover {
+        color: #fff !important;
+    }
+}
